@@ -70,14 +70,12 @@ post_offline_message(From, To, Body, MessageId) ->
     true -> Data = mochijson:encode({struct,[{<<"from">>,binary_to_list(ToUser)},
                             {<<"to">>,FromUser},
                             {<<"vhost">>,Vhost},
-                            % {<<"message">>,Body},
-                            {<<"messageId">>,MessageId}]});
+                            {<<"messageId">>,MessageId}]})
     false -> Data = mochijson:encode({struct,[{<<"from">>,binary_to_list(ToUser)},
                             {<<"to">>,FromUser},
                             {<<"vhost">>,Vhost},
                             {<<"message">>,Body},
-                            {<<"messageId">>,MessageId}]});
-        % string:join(["to=", binary_to_list(ToUser), "&from=", binary_to_list(FromUser), "&vhost=", binary_to_list(Vhost), "&body=", binary_to_list(Body), "&messageId=", binary_to_list(MessageId)], "")
+                            {<<"messageId">>,MessageId}]})
   end,
   Request = {binary_to_list(PostUrl), [{"Authorization", binary_to_list(Token)}, {"Logged-Out", "logged-out"}], "application/json", Data},
   httpc:request(post, Request,[],[]),
