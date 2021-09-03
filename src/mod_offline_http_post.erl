@@ -67,8 +67,8 @@ post_offline_message(From, To, Body, MessageId) ->
   FromUser = From#jid.luser,
   Vhost = To#jid.lserver,
   case gen_mod:get_module_opt(To#jid.lserver, ?MODULE, confidential) of
-    true -> Data = mochijson:encode({struct,[{<<"from">>,binary_to_list(ToUser)},{<<"to">>,FromUser},{<<"vhost">>,Vhost},{<<"messageId">>,MessageId}]})
-    false -> Data = mochijson:encode({struct,[{<<"from">>,binary_to_list(ToUser)},{<<"to">>,FromUser},{<<"vhost">>,Vhost},{<<"message">>,Body},{<<"messageId">>,MessageId}]})
+    true -> Data = iolist_to_binary(mochijson2:encode({struct,[{<<"from">>,binary_to_list(ToUser)},{<<"to">>,FromUser},{<<"vhost">>,Vhost},{<<"messageId">>,MessageId}]}))
+    false -> Data = iolist_to_binary(mochijson2:encode({struct,[{<<"from">>,binary_to_list(ToUser)},{<<"to">>,FromUser},{<<"vhost">>,Vhost},{<<"message">>,Body},{<<"messageId">>,MessageId}]}))
   end,
   Request = {binary_to_list(PostUrl), [{"Authorization", binary_to_list(Token)}, {"Logged-Out", "logged-out"}], "application/json", Data},
   httpc:request(post, Request,[],[]),
