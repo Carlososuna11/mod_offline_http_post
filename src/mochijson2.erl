@@ -61,9 +61,7 @@
 -export([decoder/1, decode/1, decode/2]).
 
 
--ifndef(LAGER).
--define(LAGER, 1).
--endif.
+
 %% This is a macro to placate syntax highlighters..
 -define(Q, $\").
 -define(ADV_COL(S, N), S#decoder{offset=N+S#decoder.offset,
@@ -104,6 +102,9 @@
                   column=1,
                   state=null}).
 
+-ifndef(LAGER).
+-define(LAGER, 1).
+-endif.
 %% @spec encoder([encoder_option()]) -> function()
 %% @doc Create an encoder/1 with the given options.
 %% @type encoder_option() = handler_option() | utf8_option()
