@@ -12,7 +12,7 @@ And Update to the latest version and works with Content-Type: `application/json`
 1)  Locate The Ejabberd-contrib-module on your system:
     - some examples of where it might be found are:
         - if you installed ejabberd from the github repository or the website:
-            - `/opt/ejabberd-19.02/.ejabberd-module/`
+            - `/opt/ejabberd-18.02/.ejabberd-module/`
         - If you installed Ejabberd via the RPM or APT package:
             - `/var/lib/ejabberd/.ejabberd-modules/`
 
@@ -24,14 +24,14 @@ And Update to the latest version and works with Content-Type: `application/json`
                 2) then you must install any package so that the folder is created for you, I recommend you follow this [tutorial](https://docs.ejabberd.im/developer/extending-ejabberd/modules/#managing-your-own-modules), which is extremely simple 
 2) Enter to the source directory and make git clone of the repository:
 ```console
-root@server:/var/lib/ejabberd/.ejabberd-modules/sources/# git clone https://github.com/Carlososuna11/mod_offline_http_post.git 
+root@server:/var/lib/ejabberd/.ejabberd-modules/sources/# git clone -b version18 https://github.com/Carlososuna11/mod_offline_http_post.git 
 ```
-**Note**: remember to change the branch so that version 19 can be installed
+**Note**: remember to change the branch so that version 18 can be installed
 
 3) install module:
     - if you installed ejabberd from the github repository or the website:
     ```console
-    root@server:opt/ejabberd-19.02/.ejabberd-module/bin/# ejabberdctl module_install mod_offline_http_post
+    root@server:opt/ejabberd-18.02/.ejabberd-module/bin/# ejabberdctl module_install mod_offline_http_post
     ```
     - If you installed Ejabberd via the RPM or APT package:
     ```console

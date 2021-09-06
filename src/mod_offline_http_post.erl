@@ -7,7 +7,6 @@
 
 -export([start/2, stop/1, create_message/1, create_message/3]).
 
--include("scram.hrl").
 -include("xmpp.hrl").
 -include("logger.hrl").
 
