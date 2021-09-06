@@ -1,5 +1,5 @@
 sudo chmod a+rwx ebin/
-# MOD_OFFLINE_HTTP_POST MODULE UPDATE FOR THE VERSION 19
+# MOD_OFFLINE_HTTP_POST MODULE UPDATE FOR THE VERSION 18 (18 - 18.09)
 
 ### Take from:
 - see: [github](https://github.com/badlop/mod_offline_http_post/tree/master)
