@@ -24,7 +24,7 @@ And Update to the latest version and works with Content-Type: `application/json`
                 2) then you must install any package so that the folder is created for you, I recommend you follow this [tutorial](https://docs.ejabberd.im/developer/extending-ejabberd/modules/#managing-your-own-modules), which is extremely simple 
 2) Enter to the source directory and make git clone of the repository:
 ```console
-root@server:/var/lib/ejabberd/.ejabberd-modules/sources/# git clone https://github.com/Carlososuna11/mod_offline_http_post.git 
+root@server:/var/lib/ejabberd/.ejabberd-modules/sources/# git clone -b version19 https://github.com/Carlososuna11/mod_offline_http_post.git 
 ```
 **Note**: remember to change the branch so that version 19 can be installed
 
