@@ -1,5 +1,6 @@
 # MOD_OFFLINE_HTTP_POST MODULE UPDATE
 
+it works from version 20 to 21 (actually)
 ### Take from:
 - see: [github](https://github.com/badlop/mod_offline_http_post/tree/master)
 - see: [stackoverflow](https://stackoverflow.com/questions/61918443/custom-module-in-ejabberd-is-not-called)
