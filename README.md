@@ -1,6 +1,7 @@
 sudo chmod a+rwx ebin/
 # MOD_OFFLINE_HTTP_POST MODULE UPDATE FOR THE VERSION 19
 
+it works from version 18.09 to 19.09, idk if works in version 19.09+
 ### Take from:
 - see: [github](https://github.com/badlop/mod_offline_http_post/tree/master)
 - see: [stackoverflow](https://stackoverflow.com/questions/61918443/custom-module-in-ejabberd-is-not-called)
