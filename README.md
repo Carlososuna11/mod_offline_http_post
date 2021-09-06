@@ -1,5 +1,7 @@
 sudo chmod a+rwx ebin/
-# MOD_OFFLINE_HTTP_POST MODULE UPDATE FOR THE VERSION 18 (18 - 18.09)
+# MOD_OFFLINE_HTTP_POST MODULE UPDATE FOR THE VERSION 18 (18 - 18.08)
+
+idk if this works in previus versions but it works in 18.01 to 18.08 to new versions see another branchs
 
 ### Take from:
 - see: [github](https://github.com/badlop/mod_offline_http_post/tree/master)
